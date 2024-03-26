@@ -4,7 +4,8 @@ from src.ego import Ego
 from src.npc import Npc_Car
 
 class YamlExporter:
-    def export(map_filepath: str, ego: Ego, npcs: list[Npc_Car], yaml_filepath: str='./sample.yaml'):
+    @staticmethod
+    def export(map_filepath: str, ego: Ego, npcs: list[Npc_Car], yaml_filepath: str):
         output_dict = {
             'map': map_filepath,
             'ego': {
